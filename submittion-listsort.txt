@@ -1,0 +1,70 @@
+Submitted By ankurgohain2005@gmail.com
+Couldn't submit a python file as I kept getting a "TypeError" with pandas. :)
+
+PS C:\Users\Asus\Downloads> python        
+Python 3.12.1 (tags/v3.12.1:2305ca5, Dec  7 2023, 22:03:25) [MSC v.1937 64 bit (AMD64)] on win32
+Type "help", "copyright", "credits" or "license" for more information.
+>>> import pandas
+>>> pandas.read_excel("List of Hackathon Names.xlsx")                                   
+                Name Start Date   End Date
+0       Hack at Home 2020-05-02 2020-05-03
+1        Hacklarious 2020-05-09 2020-05-10
+2     Hack the Chain 2020-05-16 2020-05-17
+3      BackyardHacks 2020-05-22 2020-05-24
+4        RookieHacks 2020-05-29 2020-05-31
+..               ...        ...        ...
+98         FinHack 2 2023-09-29 2023-10-02
+99     Hack-on-chain 2023-09-30 2023-10-03
+100   Support-a-thon 2023-10-01 2023-10-04
+101    Design-a-thon 2023-10-02 2023-10-05
+102  Hacky New Year! 2023-10-03 2023-10-06
+
+[103 rows x 3 columns]
+>>> df = pandas.read_excel("List of Hackathon Names.xlsx") 
+>>> df.sort_values(by=['Name'], ascending=[True], inplace=True, ignore_index=True)
+>>> df
+                               Name Start Date   End Date
+0                          AI Hacks 2019-04-18 2019-04-21
+1                     Agent: Hacker 2022-06-25 2022-06-28
+2                   Agent: Hacker 2 2019-09-08 2019-09-11
+3                   Aye aye Hackers 2020-09-18 2020-09-20
+4                   Back to Hacking 2022-07-09 2022-07-12
+..                              ...        ...        ...
+98               Who done It Hacks? 2020-12-11 2020-12-13
+99   Who wants to be a hackionaire? 2020-11-27 2020-11-29
+100              Winter Hacklympics 2020-12-18 2020-12-20
+101                    YeeHaw Hacks 2020-08-14 2020-08-16
+102                  YeeHaw Hacks 2 2019-04-25 2019-04-28
+
+[103 rows x 3 columns]
+>>> df.sort_values(by=['Start Date'], ascending=[True])
+                           Name Start Date   End Date
+15                     EduHacks 2019-04-17 2019-04-20
+0                      AI Hacks 2019-04-18 2019-04-21
+59           Hacky Winterland 2 2019-04-19 2019-04-22
+84  See You Later, Hackulator 2 2019-04-20 2019-04-23
+66        Impractical Hackers 2 2019-04-21 2019-04-24
+..                          ...        ...        ...
+17                    FinHack 2 2023-09-29 2023-10-02
+40                Hack-on-chain 2023-09-30 2023-10-03
+90               Support-a-thon 2023-10-01 2023-10-04
+12                Design-a-thon 2023-10-02 2023-10-05
+57              Hacky New Year! 2023-10-03 2023-10-06
+
+[103 rows x 3 columns]
+>>> df.sort_values(by=['End Date'], ascending=[True])   
+                           Name Start Date   End Date
+15                     EduHacks 2019-04-17 2019-04-20
+0                      AI Hacks 2019-04-18 2019-04-21
+59           Hacky Winterland 2 2019-04-19 2019-04-22
+84  See You Later, Hackulator 2 2019-04-20 2019-04-23
+66        Impractical Hackers 2 2019-04-21 2019-04-24
+..                          ...        ...        ...
+17                    FinHack 2 2023-09-29 2023-10-02
+40                Hack-on-chain 2023-09-30 2023-10-03
+90               Support-a-thon 2023-10-01 2023-10-04
+12                Design-a-thon 2023-10-02 2023-10-05
+57              Hacky New Year! 2023-10-03 2023-10-06
+
+[103 rows x 3 columns]
+>>> ^Z
